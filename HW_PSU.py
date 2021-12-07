@@ -21,8 +21,10 @@ def get_info():
 
 
 def show(**kwargs):
-    print(kwargs["cpu"])
-    print(kwargs["info"])
+    cpu_template = "time_cpu : {time_cpu} | pers_cpu : {pers_cpu} | st_cpu : {st_cpu}"
+    print(cpu_template.format(**kwargs['cpu']))
+    info_template = "battery: {} | users: {} | memory: {}"
+    print(info_template.format(kwargs["info"]["battery"], kwargs["info"]["users"], kwargs["info"]["memory"]))
 
 
 def run():
