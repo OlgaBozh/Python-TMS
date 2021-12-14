@@ -6,7 +6,7 @@ def decor(func):
 
     def get_cpu():
         cpu_info = func()
-        json_cpu = json.dumps(cpu_info, separators=(" *** ", " = "))
+        json_cpu = json.dumps(cpu_info, separators=(" . ", " = "))
         print(json_cpu)
 
         return json_cpu
