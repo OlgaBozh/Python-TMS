@@ -30,5 +30,5 @@ def show():
 
     return cpu_info
 
-
-show()
+if __name__ == "__main__"":
+    show()
